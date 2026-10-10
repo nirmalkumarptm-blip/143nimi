@@ -21,11 +21,11 @@ const CONFIG = {
 
   // Landing page
   landingHeading: "Nirmal Has a Question for You…",
-  landingSubtitle: "Three little numbers. One big feeling. A question from my heart.",
+  landingSubtitle: "Three little numbers. One big feeling. Ithu onakkagathan priya.",
 
   // The letter. Leave a blank line between paragraphs.
   // The first paragraph is shown as the greeting.
-  message: `Hey {recipient},
+  message: `Hey {Priya},
 
 There’s something I’ve been wanting to tell you for a while.
 
@@ -37,15 +37,15 @@ So today, I want to ask you something from my heart…`,
 
   // The proposal. If recipientName is set, it is added to the question
   // automatically ("Will You Accept My Love, Sam?").
-  proposalQuestion: "Will You Accept My Love?",
+  proposalQuestion: "Ennoda love ah Accept pandriya priya?",
   proposalSubtitle: "No pressure, no expectations. Just a little piece of my heart, hoping to make you smile.",
 
   // After "Yes, I Accept Your Love"
-  acceptTitle: "You Just Made My Heart Smile!",
-  acceptMessage: "Thank you for giving this little love story a chance. Whatever comes next, this moment will always be special.",
+  acceptTitle: "Ennudaiya heart ah thirudivittaye thirudi!",
+  acceptMessage: "enakkaga time spend pannathukku nandri priya aprm na onakku enna secret message sonnalum  ithulathan solluvan, so appo appo check pannu.",
 
   // After "Let Me Think"
-  thinkMessage: "Take your time. Your feelings matter, and there’s no rush.",
+  thinkMessage: "yosichina mandaiya odaippan dii, olunga ennoda love ahh accept pannu loosu chellame.",
 
   // Optional background music. Leave "" for no music (the music button is then hidden).
   // Example: "assets/music.mp3". Music only starts when the visitor taps the button.
