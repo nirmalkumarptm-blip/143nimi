@@ -20,7 +20,7 @@ const CONFIG = {
   siteTitle: "Accept My 143",
 
   // Landing page
-  landingHeading: "Someone Has a Question for You…",
+  landingHeading: "Nirmal Has a Question for You…",
   landingSubtitle: "Three little numbers. One big feeling. A question from my heart.",
 
   // The letter. Leave a blank line between paragraphs.
