@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08030f">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A little question, written from the heart.">
+  <title>Accept My 143</title>
+
+  <!-- Heart favicon (inline, so there is no missing-file request) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff3d9a' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E">
+
+  <!-- Fonts: optional. If they cannot load, the page falls back to Georgia / system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,600&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- SVG sprite: one heart shape reused everywhere -->
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="heartGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#ff8cc2"/>
+        <stop offset="1" stop-color="#ff3d6e"/>
+      </linearGradient>
+    </defs>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+    <symbol id="i-heart-glow" viewBox="0 0 24 24">
+      <path fill="url(#heartGrad)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+  </svg>
+
+  <!-- Layered cinematic background (decorative) -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="stars stars-a" id="starsA"></div>
+    <div class="stars stars-b" id="starsB"></div>
+    <div class="stars stars-c" id="starsC"></div>
+    <div class="hearts-field" id="heartsField"></div>
+  </div>
+  <div class="bloom" id="bloom" aria-hidden="true"></div>
+
+  <div id="app">
+
+    <!-- Music control: shown only when a music URL is configured. Never autoplays. -->
+    <button class="music-toggle" id="musicBtn" type="button" aria-pressed="false" aria-label="Play background music" title="Play background music" hidden>
+      <svg class="icon-on" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/>
+      </svg>
+      <svg class="icon-off" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M16 9.5l5 5"/><path d="M21 9.5l-5 5"/>
+      </svg>
+    </button>
+
+    <main>
+
+      <!-- 1. Landing -->
+      <section id="hero" class="scene scene-hero" aria-labelledby="heroTitle" tabindex="-1">
+        <div class="hero-content is-intro" id="heroContent">
+          <svg class="hero-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-heart-glow"/></svg>
+          <h1 id="heroTitle">
+            <span class="hero-line" id="heroLine">Someone Has a Question for You…</span>
+            <span class="hero-title" id="siteTitle">Accept My 143</span>
+          </h1>
+          <p class="hero-sub" id="heroSub">Three little numbers. One big feeling. A question from my heart.</p>
+          <button class="btn btn-primary btn-lg" id="openBtn" type="button">Open My Heart</button>
+          <noscript><p class="noscript">This little love story needs JavaScript to open. Please turn it on and refresh the page.</p></noscript>
+        </div>
+        <div class="scroll-cue" id="scrollCue" aria-hidden="true"><span class="scroll-cue-dot"></span></div>
+      </section>
+
+      <!-- 2. Letter -->
+      <section id="letter" class="scene scene-letter" aria-labelledby="letterTitle" tabindex="-1" hidden>
+        <article class="letter-card glass">
+          <div class="letter-seal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><use href="#i-heart"/></svg>
+          </div>
+          <h2 id="letterTitle" class="sr-only">A letter for you</h2>
+          <div class="letter-skip">
+            <button class="btn btn-ghost btn-sm" id="skipBtn" type="button">Show the whole letter</button>
+          </div>
+          <div class="letter-text" id="letterText" aria-hidden="true"></div>
+          <div class="sr-only" id="letterFull"></div>
+          <p class="letter-sign" id="letterSign"></p>
+          <div class="letter-actions">
+            <button class="btn btn-primary" id="letterNext" type="button" hidden>Continue…</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- 3. Meaning of 143 -->
+      <section id="decode" class="scene scene-decode" aria-labelledby="decodeTitle" tabindex="-1" hidden>
+        <div class="decode-inner">
+          <ul class="decode-list" id="decodeList">
+            <li class="decode-item">
+              <span class="decode-num">1</span>
+              <span class="decode-eq" aria-hidden="true">=</span>
+              <span class="sr-only"> equals </span>
+              <span class="decode-word">I</span>
+            </li>
+            <li class="decode-item">
+              <span class="decode-num">4</span>
+              <span class="decode-eq" aria-hidden="true">=</span>
+              <span class="sr-only"> equals </span>
+              <span class="decode-word">Love</span>
+            </li>
+            <li class="decode-item">
+              <span class="decode-num">3</span>
+              <span class="decode-eq" aria-hidden="true">=</span>
+              <span class="sr-only"> equals </span>
+              <span class="decode-word">You</span>
+            </li>
+          </ul>
+
+          <div class="decode-final-wrap">
+            <div class="burst" id="decodeBurst" aria-hidden="true"></div>
+            <h2 class="decode-final" id="decodeTitle">143&nbsp;— I&nbsp;LOVE&nbsp;YOU</h2>
+          </div>
+          <p class="decode-tag" id="decodeTag">Three numbers. Three words. One honest feeling.</p>
+          <button class="btn btn-primary" id="decodeNext" type="button" hidden>One last thing…</button>
+        </div>
+      </section>
+
+      <!-- 4. Proposal -->
+      <section id="proposal" class="scene scene-proposal" aria-labelledby="proposalTitle" tabindex="-1" hidden>
+        <div class="proposal-main">
+          <div class="proposal-heart" aria-hidden="true">
+            <span class="ring"></span>
+            <span class="ring ring-2"></span>
+            <svg viewBox="0 0 24 24" focusable="false"><use href="#i-heart-glow"/></svg>
+          </div>
+          <h2 id="proposalTitle" class="proposal-title">Will You Accept My Love?</h2>
+          <p class="proposal-sub" id="proposalSub">No pressure, no expectations. Just a little piece of my heart, hoping to make you smile.</p>
+          <div class="choices">
+            <button class="btn btn-primary btn-lg" id="yesBtn" type="button">Yes, I Accept Your Love ❤️</button>
+            <button class="btn btn-ghost btn-lg" id="thinkBtn" type="button">Let Me Think 💌</button>
+          </div>
+          <p class="think-note" id="thinkNote" role="status" aria-live="polite"></p>
+        </div>
+
+        <footer class="site-footer">
+          <p class="made-with">Made with love
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><use href="#i-heart-glow"/></svg>
+          </p>
+          <button class="link-btn" id="footerReplay" type="button">Replay the story</button>
+        </footer>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Celebration overlay -->
+  <div class="celebration" id="celebration" hidden>
+    <div class="celebration-card glass" id="celebCard" role="dialog" aria-modal="true" aria-labelledby="celebTitle" aria-describedby="celebMsg" tabindex="-1">
+      <svg class="celeb-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-heart-glow"/></svg>
+      <h2 id="celebTitle" class="celeb-title">You Just Made My Heart Smile!</h2>
+      <p id="celebMsg" class="celeb-msg">Thank you for giving this little love story a chance. Whatever comes next, this moment will always be special.</p>
+      <div class="celeb-actions">
+        <button class="btn btn-primary" id="replayBtn" type="button">Replay Our Little Story</button>
+        <button class="btn btn-ghost" id="closeCelebBtn" type="button">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
