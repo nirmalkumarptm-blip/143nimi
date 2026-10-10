@@ -13,8 +13,8 @@
    ========================================================================== */
 const CONFIG = {
   // Who is this from, and who is it for? (e.g. "Alex" and "Sam")
-  senderName: "",        // empty → "Someone special"
-  recipientName: "",     // empty → "You"
+  senderName: "Nirmal",        // empty → "Someone special"
+  recipientName: "Priya",     // empty → "You"
 
   // Browser tab title and the big glowing title on the landing page
   siteTitle: "Accept My 143",
@@ -64,14 +64,14 @@ So today, I want to ask you something from my heart…`,
   /* ---------- Built-in fallbacks (used when a CONFIG field is empty) ---------- */
   const DEFAULTS = {
     siteTitle: "Accept My 143",
-    landingHeading: "Someone Has a Question for You…",
-    landingSubtitle: "Three little numbers. One big feeling. A question from my heart.",
-    message: "Hey {recipient},\n\nThere’s something I’ve been wanting to tell you for a while.\n\nSome people come into our lives and make ordinary moments feel extraordinary. Your smile, your presence, and the little things about you have a way of making my day better.\n\nI don’t know what the future holds, but I know that what I feel is genuine.\n\nSo today, I want to ask you something from my heart…",
-    proposalQuestion: "Will You Accept My Love?",
+    landingHeading: "Nirmal Has a Question for You…",
+    landingSubtitle: "Three little numbers. One big feeling. Ithu onakkagathan priya.",
+    message: "Hey {Priya},\n\nThere’s something I’ve been wanting to tell you for a while.\n\nSome people come into our lives and make ordinary moments feel extraordinary. Your smile, your presence, and the little things about you have a way of making my day better.\n\nI don’t know what the future holds, but I know that what I feel is genuine.\n\nSo today, I want to ask you something from my heart…",
+    proposalQuestion: "Ennoda love ah Accept pandriya priya?",
     proposalSubtitle: "No pressure, no expectations. Just a little piece of my heart, hoping to make you smile.",
-    acceptTitle: "You Just Made My Heart Smile!",
-    acceptMessage: "Thank you for giving this little love story a chance. Whatever comes next, this moment will always be special.",
-    thinkMessage: "Take your time. Your feelings matter, and there’s no rush."
+    acceptTitle: "Ennudaiya heart ah thirudivittaye thirudi!",
+    acceptMessage: "enakkaga time spend pannathukku nandri priya aprm na onakku enna secret message sonnalum  ithulathan solluvan, so appo appo check pannu.",
+    thinkMessage: "yosichina mandaiya odaippan dii, olunga ennoda love ahh accept pannu loosu chellame."
   };
 
   const HEART_PATH = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z";
