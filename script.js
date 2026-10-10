@@ -25,7 +25,7 @@ const CONFIG = {
 
   // The letter. Leave a blank line between paragraphs.
   // The first paragraph is shown as the greeting.
-  message: `Hey {Priya},
+  message: `Hey Priya,
 
 There’s something I’ve been wanting to tell you for a while.
 
@@ -66,7 +66,7 @@ So today, I want to ask you something from my heart…`,
     siteTitle: "Accept My 143",
     landingHeading: "Nirmal Has a Question for You…",
     landingSubtitle: "Three little numbers. One big feeling. Ithu onakkagathan priya.",
-    message: "Hey {Priya},\n\nThere’s something I’ve been wanting to tell you for a while.\n\nSome people come into our lives and make ordinary moments feel extraordinary. Your smile, your presence, and the little things about you have a way of making my day better.\n\nI don’t know what the future holds, but I know that what I feel is genuine.\n\nSo today, I want to ask you something from my heart…",
+    message: "Hey Priya,\n\nThere’s something I’ve been wanting to tell you for a while.\n\nSome people come into our lives and make ordinary moments feel extraordinary. Your smile, your presence, and the little things about you have a way of making my day better.\n\nI don’t know what the future holds, but I know that what I feel is genuine.\n\nSo today, I want to ask you something from my heart…",
     proposalQuestion: "Ennoda love ah Accept pandriya priya?",
     proposalSubtitle: "No pressure, no expectations. Just a little piece of my heart, hoping to make you smile.",
     acceptTitle: "Ennudaiya heart ah thirudivittaye thirudi!",
