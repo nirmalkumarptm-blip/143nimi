@@ -49,7 +49,7 @@ Veetukku thirumbi pogumbodhu, manasula ore oru thought dhaan…
 
   // Optional background music. Leave "" for no music (the music button is then hidden).
   // Example: "assets/music.mp3". Music only starts when the visitor taps the button.
-  musicUrl: "",
+  musicUrl: "assets/reelaudio.mp3",
 
   // Typewriter speed in milliseconds per character (lower = faster, 8–80)
   typewriterSpeed: 26
