@@ -27,13 +27,13 @@ const CONFIG = {
   // The first paragraph is shown as the greeting.
   message: `Hey Priya,
 
-There’s something I’ve been wanting to tell you for a while.
-
-Some people come into our lives and make ordinary moments feel extraordinary. Your smile, your presence, and the little things about you have a way of making my day better.
-
-I don’t know what the future holds, but I know that what I feel is genuine.
-
-So today, I want to ask you something from my heart…`,
+Family oda unna ponnu paakka unga veetukku varuven… ellarum pesittu irukkumbodhu, nee enakku coffee kondu vandhu tharuva.
+Oru chinna smile pannuva, naanum vekkapattu sirippen.
+😅❤️ Apram namma rendu perum thaniya pesura chance kidaikkumbodhu, enna pesa nu theriyama konjam nervous-ah iruppen.
+Unna paathu, “Unakku ennai pudichirukka?” nu methuva kepen.
+Nee sirichitte “Pidichirukku” nu sonna, andha oru vaarthaiye enakku podhum.
+Veetukku thirumbi pogumbodhu, manasula ore oru thought dhaan…
+“Indha ponnu en life partner-ah vandha, en life romba azhaga irukkum.” ❤️`,
 
   // The proposal. If recipientName is set, it is added to the question
   // automatically ("Will You Accept My Love, Sam?").
